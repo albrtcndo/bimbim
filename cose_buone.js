@@ -4,7 +4,5 @@ $( document ).ready(function() {
   if(window.outerWidth < 425) {
     $(".blocchettino-su-desktop").addClass("nascondi");
   }
-
   
-
 });
