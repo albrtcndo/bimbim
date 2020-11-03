@@ -9,5 +9,11 @@ window.addEventListener('shake', shakeEventDidOccur, false);
 function shakeEventDidOccur () {
 
     //put your own code here etc.
-    alert('shake!');
+
+    //animazione su palla della verità
+    //far apparire il messaggio
+    //alert('shake!');
+    $("#palla-della-verita-container").addClass("shake-slow").delay(3000).queue(function(){
+    $(this).removeClass("shake-slow").dequeue();
+});
 }
