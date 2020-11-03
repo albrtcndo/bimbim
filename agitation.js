@@ -13,7 +13,5 @@ function shakeEventDidOccur () {
     //animazione su palla della verità
     //far apparire il messaggio
     //alert('shake!');
-    $("#palla-della-verita").addClass("shake-slow").delay(3000).queue(function(){
-    $(this).removeClass("shake-slow").dequeue();
-});
+    $("#palla-della-verita").addClass("shake-slow").delay(3000);
 }
