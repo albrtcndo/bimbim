@@ -4,10 +4,24 @@ body {
   margin: 0;
   padding: 0;
 }
+.nascondi {
+  display: none !important;
+}
 .palla-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: #eeeeee;
+  background-color: wheat;
+}
+.blocchettino-su-desktop {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.blocchettino-su-desktop p {
+  text-align: center;
+  font-size: 52px;
+  margin: 0;
+  padding: 0;
 }
