@@ -25,8 +25,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.palla-della-verita-container,
-.messaggio-container {
+.palla-della-verita-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +36,17 @@ body {
   height: 80vw;
   border-radius: 50%;
   background-color: black;
+}
+#container-messaggio {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 23, 78, 0.5);
 }
 .messaggio {
   font-family: "Helvetica Neue", "helvetica", "arial", sans-serif;
