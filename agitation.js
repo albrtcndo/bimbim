@@ -22,9 +22,11 @@ function shakeEventDidOccur () {
     const paginaMessaggio = document.getElementById("container-messaggio");
     //controllo se esiste una frase aperta se sì chiudo
 
+    //ipotetico controllo su esistenza di frase aperta se sì non eseguo il codice qui sotto
+
     setTimeout(function myFunction() {
 
-        var arrayFrasi = ["Un sorriso, un caffè, un buongiorno per te!",
+        var arrayFrasi = ["Un sorriso💙, un caffè, un buongiorno per te!",
         'Se al mattino<br> la <span style="color:red">tua</span> casa profuma di caffè, sicuramente il tuo sarà un giorno da Re!',
         "Le migliori frasi di vin disel"];
 

@@ -3,6 +3,7 @@ body {
   font-weight: 500;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .nascondi {
   display: none !important;
@@ -12,6 +13,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  overflow: hidden;
   background-color: wheat;
 }
 .blocchettino-su-desktop {
@@ -55,6 +57,7 @@ body {
   text-align: center;
   font-size: 32px;
   line-height: 40px;
+  padding: 0 20px;
 }
 .chiudi {
   position: fixed;
@@ -87,4 +90,69 @@ body {
   font-style: 14px;
   line-height: 1.4em;
   box-sizing: border-box;
+}
+.menu-about {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  background-color: trasparent;
+}
+.menu-about .icon-about {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.doggo {
+  width: 70vw;
+  height: auto;
+  position: absolute;
+  right: 0;
+}
+.pray {
+  width: 50vw;
+  height: auto;
+  position: absolute;
+  left: 0;
+}
+.menu-about .menu-open {
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 90vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  right: 0;
+  border-radius: 40px 0 0 40px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  -webkit-box-shadow: -9px 0px 15px -1px rgba(105,105,105,0.51);
+  -moz-box-shadow: -9px 0px 15px -1px rgba(105,105,105,0.51);
+  box-shadow: -9px 0px 15px -1px rgba(105,105,105,0.51);
+
+  transform:translateX(120vw);
+}
+.menu-about .menu-open .testo {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.3em;
+}
+#immaginette-finali {
+  width: 100%;
+  height: auto;
+  height: 200px;
+  position: relative;
+}
+.close-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
 }
