@@ -26,13 +26,19 @@ function shakeEventDidOccur () {
 
     setTimeout(function myFunction() {
 
-        var arrayFrasi = ["Un sorriso💙, un caffè, un buongiorno per te!",
+        var arrayFrasi3 = ["Un sorriso💙, un caffè, un buongiorno per te!",
         'Se al mattino<br> la <span style="color:red">tua</span> casa profuma di caffè, sicuramente il tuo sarà un giorno da Re!',
         "Le migliori frasi di vin disel"];
 
+        var arrayFrasi = getVettoreFrasi();
+        console.log("questo è il vett ");
+        console.log(arrayFrasi);
+
+        var maxIndice = arrayFrasi.length - 1;
         var fraseFinta = "Un sorriso, un caffè, un buongiorno per te!";
-        var indiceAcaso = getRandomInt(0, 2);
+        var indiceAcaso = getRandomInt(0, maxIndice);
         var fraseFinta2 = arrayFrasi[indiceAcaso];
+        console.log("questo è il vett " + fraseFinta2 );
         const fraseNew = document.createElement("p");
         fraseNew.classList.add("messaggio");
         fraseNew.innerHTML = fraseFinta2;
@@ -136,4 +142,33 @@ function shakeEventDidOccur () {
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+// funzione che resituisce il vettore di frasi
+function getVettoreFrasi(min, max) {
+  var vettoreFrasi = [
+    "Tondo non so come mai (mi pia) riesco a dormire così tanto",
+    "- Buona festa della liberazione bisc!<br>- PERCHÈ NON ABBIAMO UN GIORNO IN PIÙ :(",
+    "Tondo la vostra luce sembra un cannone!",
+    "Tondo perché? :( ...<br>PERCHÈ DOBBIAMO ALZARCI!??",
+    "- Tigro cosa ne sai tu?<br>- Di che cosa?<br>- Della democrazia",
+    "Indiana Jones se sei in rischio fai un occhiolino eh",
+    "Cazzo ti ridi Davide? Pensi di poter ridere?",
+    "Bravo Tigro anche oggi ti sei giocato da solo",
+    "Non so perchè mi viene così tanto tanto tanto da dormire",
+    "Minchia Davide che spari le conoscenze",
+    "Tondo mi alzo eh...Oppure un'altra mezzora???😏... No dai...",
+    "Tigro che carino che sei [da il pollo]<br>Rosicaaa[a Leon]",
+    "[al telefono] Franci tu hai dei problemi tecnici molto seri",
+    "Tigro...volevo darti una botta.....se questo è quello che volevi tu",
+    "Top 5 band metal:<br>Lost in the forest<br>Night animals<br>Trattore non perdona<br>Shout in the sky<br>Cut the leather Jacket",
+    "Che lampadona qua fuori",
+    "Tondo, Tondo🎶<br>Non ti arriverà un domani!🎶",
+    "I fiori!!!<br>Per te!!!<br>Auguri!!!!",
+    "Tondo tu sei quelle tazze...<br>che vanno in giro",
+    "- Bisco che cos'è questo? [barattolo di 🍪] - Non chiedere le domande troppo scomode",
+    "Ranieri, Ranieri🎶<br>Tu bevi l'acqua senza bicchieri!🎶",
+    "Tigrol tu non puoi muovere"
+  ];
+  return vettoreFrasi;
 };

@@ -1,5 +1,5 @@
 body {
-  font-family: "Helvetica Neue", "helvetica", "arial", sans-serif;
+  font-family: 'Inter', 'Helvetica Neue','helvetica', 'arial', sans-serif;
   font-weight: 500;
   margin: 0;
   padding: 0;
@@ -14,7 +14,9 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  background-color: wheat;
+  background-size: cover;
+  background-image: url('imgs/carta.jpg');
+  /*background-color: wheat;*/
 }
 .blocchettino-su-desktop {
   display: block;
@@ -49,10 +51,10 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 23, 78, 0.5);
+  background-color: rgba(224, 222, 213, 0.9);
 }
 .messaggio {
-  font-family: "Helvetica Neue", "helvetica", "arial", sans-serif;
+  font-family: 'Inter', 'Helvetica Neue','helvetica', 'arial', sans-serif;
   font-weight: 500;
   text-align: center;
   font-size: 32px;
@@ -67,11 +69,11 @@ body {
   text-align: center;
   bottom: 20px;
   width: 100%;
-  font-family: "Helvetica Neue", "helvetica", "arial", sans-serif;
+  font-family: 'Inter', 'Helvetica Neue','helvetica', 'arial', sans-serif;
   font-weight: 500;
   margin: 0;
   padding: 0;
-  font-style: 14px;
+  font-size: 20px;
   line-height: 1.4em;
   cursor: pointer;
 }
@@ -82,13 +84,13 @@ body {
   background-color: trasparent;
   color: black;
   text-align: center;
-  top: 28px;
+  top: 12px;
   width: 100%;
-  font-family: "Helvetica Neue", "helvetica", "arial", sans-serif;
-  font-weight: 500;
+  font-family: 'Inter', 'Helvetica Neue','helvetica', 'arial', sans-serif;
+  font-weight: 600;
   margin: 0;
-  font-style: 14px;
-  line-height: 1.4em;
+  font-size: 24px;
+  line-height: 1.2em;
   box-sizing: border-box;
 }
 .menu-about {
@@ -106,16 +108,21 @@ body {
   right: 20px;
 }
 .doggo {
-  width: 70vw;
+  width: 60vw;
   height: auto;
   position: absolute;
   right: 0;
 }
 .pray {
-  width: 50vw;
+  width: 30vw;
   height: auto;
   position: absolute;
-  left: 0;
+  left: 15px;
+  top: 80px;
+}
+.copirait {
+  font-size: 12px;
+  padding: 0 0 10px;
 }
 .menu-about .menu-open {
   display: flex;
@@ -147,7 +154,7 @@ body {
 #immaginette-finali {
   width: 100%;
   height: auto;
-  height: 200px;
+  height: 290px;
   position: relative;
 }
 .close-menu {
