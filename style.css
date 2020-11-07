@@ -134,7 +134,7 @@ body {
 }
 .copirait {
   font-size: 12px;
-  padding: 0 0 10px;
+  padding: 0;
 }
 .menu-about .menu-open {
   display: flex;
@@ -162,7 +162,8 @@ body {
 }
 .menu-about .menu-open .testo {
   margin: 0;
-  font-size: 30px;
+  font-size: 28px;
+  padding-top: 20px;
   line-height: 1.3em;
 }
 #immaginette-finali {
@@ -173,7 +174,8 @@ body {
 }
 .close-menu {
   position: fixed;
-  top: 20px;
+  top: 10px;
   right: 20px;
   font-size: 32px;
+  margin: 0;
 }

@@ -64,7 +64,7 @@ $( document ).ready(function() {
   scrollTrigger: {
     scroller: ".menu-open",
     trigger: "#immaginette-finali",
-    start: "top bottom",
+    start: "center bottom",
     toggleActions: "play none none reverse",
     markers: true
   },
@@ -127,10 +127,9 @@ $('#immaginette-finali').click(function() {
       ease: Power1. easeOut
   },'animazione3');
 
-
+  //controllo di non aver superato gli sfondi disponibili
   contaSfondi += 1;
 
-  //controllo di non aver superato gli sfondi disponibili
   if (contaSfondi >= arraySfondiPalla.length) {
     contaSfondi = 0;
   }
