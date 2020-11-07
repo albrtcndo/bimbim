@@ -64,7 +64,8 @@ $( document ).ready(function() {
   scrollTrigger: {
     scroller: ".menu-open",
     trigger: "#immaginette-finali",
-    start: "bottom bottom",
+    start: "top bottom",
+    toggleActions: "play none none reverse",
     markers: true
   },
   defaults: {
@@ -75,6 +76,69 @@ $( document ).ready(function() {
 .add('appearDoggo')
 .from(".doggo",{x: 200},'appearDoggo += 1.5')
 .from(".pray",{x: -200},'appearDoggo')
+
+//variabile contatore sfondo
+var contaSfondi = 0;
+
+//vettore sfondi
+var arraySfondiPalla = [
+  "imgs/sfondo1.jpg",
+  "imgs/sfondo2.jpg",
+  "imgs/sfondo3.jpg"
+];
+
+//click sul cambia sfondo
+$('#immaginette-finali').click(function() {
+
+  //animzione delle mani
+
+  gsap.timeline()
+  .add("animazione1")
+  .add("animazione2 += 1")
+  .add("animazione3 += 1")
+  .to(".pray-1", {
+      opacity: 0,
+      duration: 0.7,
+      ease: Power1. easeOut
+  },'animazione1')
+  .to(".pray-2", {
+      opacity: 1,
+      duration: 0.7,
+      ease: Power1. easeOut
+  },'animazione1')
+  .to(".pray-2", {
+      opacity: 0,
+      duration: 0.7,
+      ease: Power1. easeOut
+  },'animazione2')
+  .to(".pray-3", {
+      opacity: 1,
+      duration: 0.7,
+      ease: Power1. easeOut
+  },'animazione2')
+  .to(".pray-3", {
+      opacity: 0,
+      duration: 0.7,
+      ease: Power1. easeOut
+  },'animazione3')
+  .to(".pray-1", {
+      opacity: 1,
+      duration: 0.7,
+      ease: Power1. easeOut
+  },'animazione3');
+
+
+  contaSfondi += 1;
+
+  //controllo di non aver superato gli sfondi disponibili
+  if (contaSfondi >= arraySfondiPalla.length) {
+    contaSfondi = 0;
+  }
+  //cambio sfondo
+  $('#palla-della-verita').css("background-image", "url("+ arraySfondiPalla[contaSfondi]);
+
+});
+
 
 
 
