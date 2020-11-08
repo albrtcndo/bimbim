@@ -30,6 +30,7 @@ function shakeEventDidOccur () {
         var maxIndice = arrayFrasi.length - 1;
 
         var indiceAcaso = getRandomInt(0, maxIndice);
+        console.log("è uscita la frase numero:"+ indiceAcaso);
         var fraseFinta2 = arrayFrasi[indiceAcaso];
         const fraseNew = document.createElement("p");
         fraseNew.classList.add("messaggio");
@@ -52,22 +53,22 @@ function shakeEventDidOccur () {
             autoAlpha: 0,
         }, {
             autoAlpha: 1,
-            duration: 2,
-            ease: Bounce. easeOut
+            duration: 1,
+            ease: Power1. easeOut
         },'messaggione')
         .fromTo(messageAppear, {
-            x: -400,
+            x: 0,
             display: "none",
             autoAlpha: 0,
-            scale: 1,
-            transformOrigin: '50% 0%'
+            scale: 0.1,
+            transformOrigin: '50% 50%'
         }, {
             x: 0,
             display: "block",
             autoAlpha: 1,
             scale: 1,
-            duration: 4,
-            ease: Bounce. easeOut
+            duration: 1.4,
+            ease: Power1. easeOut
         },'messaggione += 0.1')
         .to(closeAppear, {
             x: 0,
@@ -160,7 +161,9 @@ function getVettoreFrasi(min, max) {
     "Tondo tu sei quelle tazze...<br>che vanno in giro",
     "- Bisco che cos'è questo? [barattolo di 🍪] - Non chiedere le domande troppo scomode",
     "Ranieri, Ranieri🎶<br>Tu bevi l'acqua senza bicchieri!🎶",
-    "Tigrol tu non puoi muovere"
+    "Il tappeto con sopra gli arabi",
+    "Tigrol tu non puoi muovere",
+    '<span style="font-size:58px">🧀 👤 🐩</span>'
   ];
   return vettoreFrasi;
 };

@@ -59,88 +59,103 @@ $( document ).ready(function() {
 
 
 
- //animazioncina doggo
- var tl = gsap.timeline({
-  scrollTrigger: {
-    scroller: ".menu-open",
-    trigger: "#immaginette-finali",
-    start: "center bottom",
-    toggleActions: "play none none reverse",
-    markers: true
-  },
-  defaults: {
-    opacity: 0,
-    duration: 1.5
-  }
-})
-.add('appearDoggo')
-.from(".doggo",{x: 200},'appearDoggo += 1.5')
-.from(".pray",{x: -200},'appearDoggo')
-
-//variabile contatore sfondo
-var contaSfondi = 0;
-
-//vettore sfondi
-var arraySfondiPalla = [
-  "imgs/sfondo1.jpg",
-  "imgs/sfondo2.jpg",
-  "imgs/sfondo3.jpg"
-];
-
-//click sul cambia sfondo
-$('#immaginette-finali').click(function() {
-
-  //animzione delle mani
-
-  gsap.timeline()
-  .add("animazione1")
-  .add("animazione2 += 1")
-  .add("animazione3 += 1")
-  .to(".pray-1", {
+  //animazioncina doggo
+   var tl = gsap.timeline({
+    scrollTrigger: {
+      scroller: ".menu-open",
+      trigger: "#immaginette-finali",
+      start: "center bottom",
+      toggleActions: "play none none reverse",
+      markers: false
+    },
+    defaults: {
       opacity: 0,
-      duration: 0.7,
-      ease: Power1. easeOut
-  },'animazione1')
-  .to(".pray-2", {
-      opacity: 1,
-      duration: 0.7,
-      ease: Power1. easeOut
-  },'animazione1')
-  .to(".pray-2", {
-      opacity: 0,
-      duration: 0.7,
-      ease: Power1. easeOut
-  },'animazione2')
-  .to(".pray-3", {
-      opacity: 1,
-      duration: 0.7,
-      ease: Power1. easeOut
-  },'animazione2')
-  .to(".pray-3", {
-      opacity: 0,
-      duration: 0.7,
-      ease: Power1. easeOut
-  },'animazione3')
-  .to(".pray-1", {
-      opacity: 1,
-      duration: 0.7,
-      ease: Power1. easeOut
-  },'animazione3');
+      duration: 1.5
+    }
+  })
+  .add('appearDoggo')
+  .from(".doggo",{x: 200},'appearDoggo += 1.5')
+  .from(".pray",{x: -200},'appearDoggo')
 
-  //controllo di non aver superato gli sfondi disponibili
-  contaSfondi += 1;
+  //variabile contatore sfondo
+  var contaSfondi = 0;
 
-  if (contaSfondi >= arraySfondiPalla.length) {
-    contaSfondi = 0;
-  }
-  //cambio sfondo
-  $('#palla-della-verita').css("background-image", "url("+ arraySfondiPalla[contaSfondi]);
+  //vettore sfondi
+  var arraySfondiPalla = [
+    "imgs/palla-black-min.png",
+    "imgs/palla-bisc-min.png",
+    "imgs/palla-calzin-min.png",
+    "imgs/palla-bicchierin-min.png"
+  ];
 
-});
+  //click sul cambia sfondo
+  $('#immaginette-finali').click(function() {
+
+    //animzione delle mani
+    gsap.timeline()
+    .add("animazione1")
+    .add("animazione2 += 1")
+    .add("animazione3 += 1")
+    .to(".pray-1", {
+        opacity: 0,
+        duration: 0.7,
+        ease: Power1. easeOut
+    },'animazione1')
+    .to(".pray-2", {
+        opacity: 1,
+        duration: 0.7,
+        ease: Power1. easeOut
+    },'animazione1')
+    .to(".pray-2", {
+        opacity: 0,
+        duration: 0.7,
+        ease: Power1. easeOut
+    },'animazione2')
+    .to(".pray-3", {
+        opacity: 1,
+        duration: 0.7,
+        ease: Power1. easeOut
+    },'animazione2')
+    .to(".pray-3", {
+        opacity: 0,
+        duration: 0.7,
+        ease: Power1. easeOut
+    },'animazione3')
+    .to(".pray-1", {
+        opacity: 1,
+        duration: 0.7,
+        ease: Power1. easeOut
+    },'animazione3');
+
+    //controllo di non aver superato gli sfondi disponibili
+    contaSfondi += 1;
+
+    if (contaSfondi >= arraySfondiPalla.length) {
+      contaSfondi = 0;
+    }
+    //cambio sfondo
+    $('#palla-della-verita').css("background-image", "url("+ arraySfondiPalla[contaSfondi]);
+
+  });
 
 
-
-
+  //popup iniziale
+  var check_width = $("body").width();
+    if (check_width < 981) {
+      var datamodalpopup = sessionStorage.getItem('shown-modal-pop');
+      console.log("questo è il valore del session storage: " + datamodalpopup );
+      if( !sessionStorage.getItem('shown-modal-pop')){
+        //visualizzo il pop up
+        setTimeout(function(){
+              $(".pop-up").addClass("show-popup");
+          }, 10);
+        sessionStorage.setItem('shown-modal-pop', 'true');
+        $(".close-pop-up").on('click', function(){
+            console.log("close-pop-up cliccato");
+            $(".pop-up").removeClass("show-popup");
+        });
+    	}
+    }
 
 
 });

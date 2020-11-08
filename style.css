@@ -19,20 +19,30 @@ body {
   /*background-color: wheat;*/
 }
 .blocchettino-su-desktop {
-  display: block;
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-size: cover;
   background-image: url('imgs/carta.jpg');
   position: absolute;
-  z-index: 9999;
+  z-index: 99999;
 }
 .blocchettino-su-desktop p {
-  text-align: center;
-  font-size: 3.7vw;
+  position: absolute;
+  left: 0;
+  width: 40%;
+  text-align: left;
+  font-size: 2.7vw;
   margin: 0;
-  padding: 2% 8%;
-  font-weight: 600;
+  padding: 2%;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+.img-block {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  mix-blend-mode: multiply;
 }
 .palla-della-verita-container {
   display: flex;
@@ -45,7 +55,7 @@ body {
   height: 80vw;
   border-radius: 50%;
   background-size: cover;
-  background-image: url('imgs/sfondo1.jpg');
+  background-image: url('imgs/palla-black-min.png');
 }
 #container-messaggio {
   position: fixed;
@@ -56,7 +66,8 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(224, 222, 213, 0.9);
+  /*background-color: rgba(224, 222, 213, 0.9);*/
+  background-color: rgba(244, 244, 244, 0.9);
 }
 .messaggio {
   font-family: 'Inter', 'Helvetica Neue','helvetica', 'arial', sans-serif;
@@ -109,12 +120,17 @@ body {
   background-color: trasparent;
 }
 .icon-about {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   cursor: pointer;
   pointer-events: all;
+  mix-blend-mode: multiply;
   /*z-index: 9;*/
+}
+.icon-about img {
+  width: 50px;
+  mix-blend-mode: multiply;
 }
 .doggo {
   width: 60vw;
@@ -134,7 +150,7 @@ body {
 }
 .copirait {
   font-size: 12px;
-  padding: 0;
+  padding: 0 0 10px;
 }
 .menu-about .menu-open {
   display: flex;
@@ -178,4 +194,35 @@ body {
   right: 20px;
   font-size: 32px;
   margin: 0;
+}
+.pop-up {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-size: cover;
+  background-image: url('imgs/carta.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.pop-up p {
+  text-align: center;
+  font-size: 12px;
+  color: blue;
+  padding: 2%;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+.show-popup {
+  opacity: 1 !important;
+  pointer-events: all;
 }
