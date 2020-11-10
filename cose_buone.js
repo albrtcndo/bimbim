@@ -1,8 +1,13 @@
+$(window).load(function(){
+   // PAGE IS FULLY LOADED 
+   $(".loading").addClass("nascondi");
+});
+
 $( document ).ready(function() {
 
 
   //quando la pagina è carica rimuovo il loader
-  $(".loading").addClass("nascondi");
+  //$(".loading").addClass("nascondi");
 
   //rimuovo blocco desktop
   if(window.outerWidth < 425) {
