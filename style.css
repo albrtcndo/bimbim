@@ -265,6 +265,7 @@ body {
 .loading .img-load {
   mix-blend-mode: multiply;
   width: 20vw;
+  max-width: 50px;
   height: auto;
   animation: spin 1s linear infinite;
 }
