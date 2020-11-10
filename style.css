@@ -23,8 +23,9 @@ body {
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-image: url('imgs/carta.jpg');
-  position: absolute;
+  background-color: #ebebeb;
+  /*background-image: url('imgs/carta.jpg');*/
+  position: fixed;
   z-index: 99999;
 }
 .blocchettino-su-desktop p {
