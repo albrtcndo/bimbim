@@ -7,6 +7,7 @@ $( document ).ready(function() {
 
   var quantiClik = 0;
   //test on click
+  /*
   $('body').click(function() {
    // do something here
    console.log("ci sono "+ quantiClik + " click");
@@ -19,7 +20,7 @@ $( document ).ready(function() {
      console.log("no ora sta fermo");
    }
 
- });
+ });*/
 
  //apertura/chiusura menu
  $('.icon-about').click(function() {
@@ -139,7 +140,8 @@ $( document ).ready(function() {
   });
 
 
-  //popup iniziale
+  //popup iniziale con cookie
+  /*
   var check_width = $("body").width();
     if (check_width < 981) {
       var datamodalpopup = sessionStorage.getItem('shown-modal-pop');
@@ -155,7 +157,15 @@ $( document ).ready(function() {
             $(".pop-up").removeClass("show-popup");
         });
     	}
-    }
+    }*/
+    //popup senza cookie
+    var check_width = $("body").width();
+      if (check_width < 981) {
+        $(".close-pop-up").on('click', function(){
+            console.log("close-pop-up cliccato");
+            $(".pop-up").removeClass("show-popup");
+        });
+      }
 
 
 });

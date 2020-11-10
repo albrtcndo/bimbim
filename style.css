@@ -202,25 +202,38 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: 999;
+  padding: 6.5% 3%;
+  box-sizing: border-box;
   background-size: cover;
   background-image: url('imgs/carta.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -o-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 .pop-up p {
   text-align: center;
   font-size: 12px;
-  color: blue;
   padding: 2%;
   box-sizing: border-box;
   font-weight: 500;
+  font-family: 'Inter', 'Helvetica Neue','helvetica', 'arial', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+.pop-up .img-intro {
+  width: 80vw;
+  mix-blend-mode: multiply;
+}
+.pop-up .close-pop-up {
+  font-size: 18px;
 }
 .show-popup {
   opacity: 1 !important;
