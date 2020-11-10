@@ -248,8 +248,9 @@ body {
   z-index: 9999999;
   padding: 0;
   box-sizing: border-box;
-  background-size: cover;
-  background-image: url('imgs/carta-min.jpg');
+  /*background-size: cover;
+  background-image: url('imgs/carta-min.jpg');*/
+  background-color: #ebebeb;
   display: flex;
   flex-direction: column;
   align-items: center;
