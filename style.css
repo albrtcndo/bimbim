@@ -262,6 +262,8 @@ body {
 }
 .loading .img-load {
   mix-blend-mode: multiply;
+  width: 50vw;
+  height: auto;
   animation: spin 1s linear infinite;
 }
 @keyframes spin {
