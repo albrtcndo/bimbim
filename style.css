@@ -53,9 +53,12 @@ body {
 #palla-della-verita {
   width: 80vw;
   height: 80vw;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   background-size: cover;
   background-image: url('imgs/palla-black-min.png');
+  -webkit-box-shadow: -6px 8px 23px -14px rgba(0,0,0,0.46);
+  -moz-box-shadow: -6px 8px 23px -14px rgba(0,0,0,0.46);
+  box-shadow: -6px 8px 23px -14px rgba(0,0,0,0.46);
 }
 #container-messaggio {
   position: fixed;
@@ -238,6 +241,39 @@ body {
 .show-popup {
   opacity: 1 !important;
   pointer-events: all;
+}
+.loading {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999999;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-image: url('imgs/carta-min.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+.loading .img-load {
+  mix-blend-mode: multiply;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hide-loading {
+  opacity: 0 !important;
+  pointer-events: none;
 }
 .noSelect {
     -webkit-touch-callout: none;

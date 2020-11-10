@@ -1,8 +1,12 @@
 $( document ).ready(function() {
 
+
+  //quando la pagina è carica rimuovo il loader
+  $(".loading").addClass("nascondi");
+
   //rimuovo blocco desktop
   if(window.outerWidth < 425) {
-    $(".blocchettino-su-desktop").addClass("nascondi");
+    $(".blocchettino-su-desktop").addClass("hide-loading");
   }
 
   var quantiClik = 0;
