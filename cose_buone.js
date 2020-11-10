@@ -1,6 +1,6 @@
 $(window).load(function(){
-   // PAGE IS FULLY LOADED 
-   $(".loading").addClass("nascondi");
+   // PAGE IS FULLY LOADED
+   $(".loading").addClass("hide-loading");
 });
 
 $( document ).ready(function() {
@@ -11,7 +11,7 @@ $( document ).ready(function() {
 
   //rimuovo blocco desktop
   if(window.outerWidth < 425) {
-    $(".blocchettino-su-desktop").addClass("hide-loading");
+    $(".blocchettino-su-desktop").addClass("nascondi");
   }
 
   var quantiClik = 0;
