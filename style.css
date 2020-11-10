@@ -263,7 +263,7 @@ body {
 }
 .loading .img-load {
   mix-blend-mode: multiply;
-  width: 50vw;
+  width: 20vw;
   height: auto;
   animation: spin 1s linear infinite;
 }
