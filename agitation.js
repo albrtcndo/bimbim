@@ -165,7 +165,7 @@ function getVettoreFrasi(min, max) {
     "Tigrol tu non puoi muovere",
     "Tondo sei scorretto",
     "Faccio caffè e mi metto a urlare",
-    "Riccordati di usare questo 🗜️per pulire le chiappe",
+    'Riccordati di usare questo <img src="imgs/mollettin.png" width="18"> per pulire le chiappe',
     "Un anziano che si pulisce...",
     '<span style="font-size:58px">🧀 👤 🐩</span>'
   ];
