@@ -164,6 +164,8 @@ function getVettoreFrasi(min, max) {
     "Il tappeto con sopra gli arabi",
     "Tigrol tu non puoi muovere",
     "Tondo sei scorretto",
+    "Faccio caffè e mi metto a urlare",
+    "Riccordati di usare questo 🗜️per pulire le chiappe",
     "Un anziano che si pulisce...",
     '<span style="font-size:58px">🧀 👤 🐩</span>'
   ];
