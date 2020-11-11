@@ -163,6 +163,8 @@ function getVettoreFrasi(min, max) {
     "Ranieri, Ranieri🎶<br>Tu bevi l'acqua senza bicchieri!🎶",
     "Il tappeto con sopra gli arabi",
     "Tigrol tu non puoi muovere",
+    "Tondo sei scorretto",
+    "Un anziano che si pulisce...",
     '<span style="font-size:58px">🧀 👤 🐩</span>'
   ];
   return vettoreFrasi;
