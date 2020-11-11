@@ -168,6 +168,19 @@ $( document ).ready(function() {
         $(".close-pop-up").on('click', function(){
             console.log("close-pop-up cliccato");
             $(".pop-up").removeClass("show-popup");
+
+            // feature detect
+            if (typeof DeviceMotionEvent.requestPermission === 'function') {
+              DeviceMotionEvent.requestPermission()
+                .then(permissionState => {
+                  if (permissionState === 'granted') {
+                    window.addEventListener('devicemotion', () => {});
+                  }
+                })
+                .catch(console.error);
+            } else {
+              // handle regular non iOS 13+ devices
+            }
         });
       }
 
